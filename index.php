@@ -1,38 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/983051cf5c.js" crossorigin="anonymous"></script>
-    <title>Mon Docteur</title>
-</head>
-<body>
+<?php
+require 'includes/header.php';
+?>
     <main>
 
-        <header>
-            <nav>
-                <a href="">
-                  Mon Docteur
-                </a>
-                <ul>
-                    <li>
-                        <a href="">Besoin d'aide <i class="far fa-question-circle"></i></a>
-                    </li>
-                    <li>
-                        <a href="">
-                            
-                            <span>Se connecter</span>
-                            <span id="gerer"><i class="fas fa-sign-in-alt"></i> Gérer mes RDV</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
         <section class="section_recherch">
             <div>
                 <div>
@@ -241,69 +211,26 @@
             <div class="recherche">
                 <form action="" class="search-bar">
                     <input id="searchme" type="search" name="search" pattern=".*\S.*" placeholder="Recherche d'informations sur autre spécialité ..." required>
-                    <button class="search-btn" type="submit" onclick="search()">
+                    <button class="search-btn" type="submit">
                         <span>Search</span>
                     </button>
                 </form>
-               <script src="js/main.js"></script>
+               <script >
+           let input=document.getElementById('searchme');
+           let searchBtn=document.querySelector('.search-btn');
+           searchBtn.onclick=function(){
+               let url='https://www.google.com/search?q='+input.value;
+               window.open(url);
+
+           }
+               </script>
             </div>
             </div>
 
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>company</h4>
-                    <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>get help</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-               
-              
-                </div>
-                <div class="footer-col">
-                   
-                   
-                        <img src="img/img1.png" alt="" id="imgdp">
-                    <script type="text/javascript">
-                        var counter = 2;
-                        setInterval(function(){
-                          document.getElementById('imgdp').setAttribute('src','img/img'+counter+'.png');
-                          counter++;
-                          if(counter > 4){
-                            counter = 1;
-                          }
-                        }, 5000);
-                        </script>
-                </div>
-            </div>
-            <p>Copyright <i class="fas fa-copyright"></i> 2022 Mon Docteur, tous droits réservés.</p>
-        </div>
-   </footer>
-
-</body>
-</html>
+   <?php
+    require 'includes/footer.php'
+   
+   ?>

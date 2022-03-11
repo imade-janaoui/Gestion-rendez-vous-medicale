@@ -1,3 +1,4 @@
+
 *{
     margin: 0px;
     padding: 0px;
@@ -36,6 +37,39 @@ nav ul li a span{
 font-size: 12px;
     /* color: #107aca; */
 }
+.section_recherch form::before{
+    content: '\f002';
+    font-family: "Font awesome 5 Free";
+    font-weight: 900;
+    margin-right: 1.5rem;
+    color: #009bf5;
+    position: relative;
+    left: 62px;
+    top: 19px;
+}
+.section_recherch form::after{
+    content: '\f3c5';
+    font-family: "Font awesome 5 Free";
+    font-weight: 900;
+    margin-right: 1.5rem;
+    color: #009bf5;
+    position: relative;
+    right: 16.4rem;
+    top: 19px;
+    font-size: 23px;
+}
+
+/* .labelicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+label.labelicon i{
+    position: relative;
+    left: 43px;
+    font-weight: 600;
+    color: #009bf5;
+} */
 
 nav>a{
     color: #fff;
@@ -44,6 +78,7 @@ nav>a{
    padding: 0px 20px;
 
 }
+
 .section_recherch{
     position: relative;
     height: 456px;
@@ -77,11 +112,12 @@ nav>a{
  width: 60%;
 
 }
+
 .section_recherch form input{
     height: 60px;
     flex: 1 0 0;
     line-height: 16px;
-    padding: 0 30px;
+    padding: 0 0 0 40px;
     font-family: "Roboto",arial,sans-serif;
     border: none;
     background-color: #fff;
@@ -147,15 +183,17 @@ section .avis{
 section.service{
     height: 40vh;
     background-color: #eef2f7;
+    display: flex;
+    justify-content: center;
 }
 .service>div{
     display: flex;
     background-color: #1f9bf3;
-    height: 50vh;
+    height:max-content;
    margin: 0px 60px;
     position: relative;
     top:-40%;
-    width: 90%;
+    width:max-content;
     
 }
 .help{
@@ -187,7 +225,7 @@ section.service{
 }
 #liste_under{
     text-decoration: underline;
-    list-style: ;
+    /* list-style: ; */
 }
 /* ---------------------- urgence-------------- */
 section .urgence{
@@ -602,3 +640,4 @@ section .urgence{
     width: 100%;
 }
 }
+

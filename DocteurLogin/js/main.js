@@ -1,49 +1,18 @@
-function ajouter(){
-    var formlogin=document.getElementById('loginform');
-    var btnsct=document.getElementById('btnScnt');
+const switchers = [...document.querySelectorAll('.switcher')]
 
-    var formsignin=document.getElementById('signinform');
-    var btnsin=document.getElementById('btnsin');
+switchers.forEach(item => {
+	item.addEventListener('click', function() {
+		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+		this.parentElement.classList.add('is-active')
+	})
+})
+// -------- atende pour verification-----
+function waite(){
 
-    formlogin.setAttribute('class','ajouter')
-    btnsct.removeAttribute('class','btn');
-
-    formsignin.removeAttribute('class','ajouter');
-    btnsin.setAttribute('class','btn');
-
+	
+		swal( "Merci de vous être inscrit sur notre plateforme Mon Docteur, veuillez patienter pendant que nous vérifions votre numéro de dipelome. Un e-mail sera envoyé à votre compte email, afin de confirmer votre compte Mon Docteur.", "Cliquez sur le bouton!!", "success");
+	  
 }
-function supr(){
-
-    var formlogin=document.getElementById('loginform');
-    var btnsct=document.getElementById('btnScnt');
-
-    var formsignin=document.getElementById('signinform');
-    var btnsin=document.getElementById('btnsin');
-
-    formlogin.removeAttribute('class','ajouter')
-    btnsct.setAttribute('class','btn');
-
-    formsignin.setAttribute('class','ajouter');
-    btnsin.removeAttribute('class','btn');
-  
-}
-// function pour afficher le temps de travaille
-
-function ulicon(){
-    var ul=document.getElementById('ulicon');
-    ul.removeAttribute('class','ulhidden');
-    var i=document.getElementById('icon');
-    i.setAttribute("style","visibility: collapse;");
-}
-function iconup(){
-    var ul=document.getElementById('ulicon');
-    ul.setAttribute('class','ulhidden');
-    var i=document.getElementById('icon');
-    i.removeAttribute("style","visibility: collapse;");
-   
-
-}
-
 
 
 
